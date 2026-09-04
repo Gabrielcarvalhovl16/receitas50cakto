@@ -208,6 +208,15 @@ p{
 
 .hero-price-block{
   margin: 30px 0 24px;
+}
+.price-old-small{
+  display: block;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+.hero-price-row{
   display: flex;
   align-items: baseline;
   gap: 10px;
@@ -371,6 +380,38 @@ p{
 }
 
 /* ==========================================================================
+   BÔNUS GRÁTIS EM DESTAQUE
+   ========================================================================== */
+.bonus-highlight{
+  background: linear-gradient(160deg, var(--deep) 0%, var(--deep-2) 100%);
+}
+.bonus-highlight-grid{
+  display: grid;
+  gap: 34px;
+  align-items: center;
+  text-align: center;
+}
+.bonus-highlight-visual{ display: flex; justify-content: center; }
+.bonus-mock{
+  width: min(260px, 70vw);
+  height: auto;
+  border-radius: var(--radius-md);
+  filter: drop-shadow(0 24px 34px rgba(0,0,0,0.45));
+}
+.bonus-highlight-copy h2{
+  color: var(--cream);
+  font-size: clamp(1.4rem, 1.15rem + 1.1vw, 1.9rem);
+  max-width: 20ch;
+  margin: 14px auto 12px;
+}
+.bonus-highlight-copy p{
+  color: rgba(246,241,230,0.82);
+  max-width: 42ch;
+  margin: 0 auto 26px;
+}
+.bonus-highlight .btn-lg{ margin: 0 auto; }
+
+/* ==========================================================================
    SHARED SECTION SPACING
    ========================================================================== */
 .section{ padding: 64px 0; }
@@ -505,6 +546,17 @@ p{
 }
 .category-card--bonus h3{ color: var(--cream); }
 .category-card--bonus p{ color: rgba(246,241,230,0.85); margin-bottom: 0; }
+.bonus-flag{
+  display: inline-block;
+  background: var(--lime);
+  color: var(--deep-2);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  padding: 4px 11px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
 
 /* ==========================================================================
    5. FOR WHO
@@ -599,6 +651,12 @@ p{
   font-size: 0.75rem;
   padding: 6px 14px;
   border-radius: 999px;
+  margin-bottom: 10px;
+  margin-right: 6px;
+}
+.offer-tag--bonus{
+  background: var(--deep);
+  color: var(--cream);
   margin-bottom: 18px;
 }
 .offer-prices{
@@ -632,6 +690,19 @@ p{
   text-align: center;
   padding: 12px 0;
 }
+.guarantee-badge{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--green);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 18px;
+}
+.guarantee-badge svg{ width: 28px; height: 28px; }
 .guarantee h2{ margin-bottom: 14px; }
 .guarantee p{ max-width: 50ch; margin: 0 auto; }
 
@@ -811,6 +882,15 @@ p{
   .presentation-grid{
     grid-template-columns: 0.8fr 1.2fr;
   }
+  .bonus-highlight-grid{
+    grid-template-columns: 0.8fr 1.2fr;
+    text-align: left;
+  }
+  .bonus-highlight-copy h2,
+  .bonus-highlight-copy p{
+    margin-left: 0;
+  }
+  .bonus-highlight .btn-lg{ margin-left: 0; }
   .steps{ grid-template-columns: repeat(3, 1fr); }
   .steps::before{
     content: "";
