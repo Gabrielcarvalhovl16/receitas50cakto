@@ -1,0 +1,23 @@
+{
+  "name": "50receitas",
+  "version": "1.0.0",
+  "description": "Baixa Caloria - 50 Receitas Práticas",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabrielcarvalhovl16/receitas50cakto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gabrielcarvalhovl16/receitas50cakto/issues"
+  },
+  "homepage": "https://github.com/Gabrielcarvalhovl16/receitas50cakto#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
