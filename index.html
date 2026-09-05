@@ -6,8 +6,33 @@
   <meta name="theme-color" content="#07100a" />
   <meta name="description" content="50 receitas práticas para deixar sua alimentação mais leve, com bônus extras e acesso imediato." />
   <title>50 Receitas Práticas | Alimentação Mais Leve</title>
+
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- ==================== META PIXEL ==================== -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;
+  n.push=n;
+  n.loaded=!0;
+  n.version='2.0';
+  n.queue=[];
+  t=b.createElement(e);
+  t.async=!0;
+  t.src=v;
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}
+  (window, document, 'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '1611006724019005');
+  fbq('track', 'PageView');
+  </script>
+  <!-- ================== FIM META PIXEL ================== -->
+
 </head>
 <body>
   <div class="noise"></div>
@@ -114,7 +139,7 @@
 
         <div class="bonus-grid">
           <article class="bonus-card featured reveal">
-            <div class="bonus-tag">BÔNUS 01 • INCLUSO</div>
+            <div class="bonus-tag">BÔNUS 01</div>
             <img src="assets/bonus-30-dias.jpg" alt="Bônus 30 Dias para Perder Gordura" />
             <div class="bonus-content">
               <h3>30 Dias Para Perder Gordura</h3>
@@ -246,7 +271,7 @@
           <details><summary>Os bônus estão inclusos?</summary><p>Sim. O pacote mostrado nesta página inclui o eBook principal e os quatro bônus descritos na oferta.</p></details>
           <details><summary>Esse material garante emagrecimento?</summary><p>Não. Alimentação, atividade física e resultados corporais variam entre pessoas. O material tem finalidade educativa e prática, não substituindo acompanhamento profissional individual.</p></details>
         </div>
-        <div class="center-cta reveal"><a class="btn btn-primary btn-xl" href="https://pay.kiwify.com.br/X1dp1et" data-buy>QUERO COMEÇAR AGORA POR R$ 16,99 →</a></div>
+        <div class="center-cta reveal"><a class="btn btn-primary btn-xl" href="https://pay.kiwify.com.br/X1dp1et" data-buy>QUERO COMEÇAR AGORA POR R$ 16,90 →</a></div>
       </div>
     </section>
 
@@ -276,6 +301,27 @@
     <a class="btn btn-primary" href="https://pay.kiwify.com.br/X1dp1et" data-buy>QUERO AGORA →</a>
   </div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
+
+<!-- ==================== EVENTO DE CHECKOUT ==================== -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  document.querySelectorAll('[data-buy]').forEach(function(button) {
+
+    button.addEventListener('click', function() {
+
+      if (typeof fbq === 'function') {
+        fbq('track', 'InitiateCheckout');
+      }
+
+    });
+
+  });
+
+});
+</script>
+<!-- ================== FIM EVENTO CHECKOUT ================== -->
+
 </body>
 </html>
